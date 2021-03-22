@@ -19,6 +19,20 @@
     }
   },
   reshuffleBorad: function (component, event, helper) {
-    console.log("Reshuffle Button is Clicked");
+    const boardComp = component.find("boardComp");
+    //calling the borad (child) component method
+    boardComp.reshuffleBoard();
+
+    //disabling the Reshuffle button
+    component.set("v.reshuffleDisabled", true);
+  },
+  onResultHandler: function (component, event, helper) {
+    const result = event.getParam("result");
+
+    if (result === "WIN") {
+      component.set("v.reshuffleDisabled", true);
+    } else {
+      component.set("v.reshuffleDisabled", false);
+    }
   }
 });

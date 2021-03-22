@@ -140,5 +140,11 @@
 
     //reset the result;
     component.set("v.result", "");
+  },
+
+  fireResultEvent: function (resultValue) {
+    const appEvent = $A.get("e.c:ResultApplicationEvent");
+    appEvent.setParams({ result: resultValue });
+    appEvent.fire();
   }
 });

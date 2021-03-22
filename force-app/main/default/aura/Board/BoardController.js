@@ -42,13 +42,21 @@
       component.set("v.result", "YOU WIN");
       console.log("YOU WIN");
       helper.disableBoard(component);
+      helper.fireResultEvent("WIN");
     } else if (clickCount === 3) {
       //user lose
       component.set("v.result", "YOU LOSE");
       console.log("YOU LOSE");
       helper.disableBoard(component);
+      helper.fireResultEvent("LOSE");
     }
     //set clickcount
     component.set("v.clickCount", clickCount);
+  },
+  reshuffleBoard: function (component, event, helper) {
+    const words = component.get("v.words");
+    const randomizeWords = helper.randomizeArray(words);
+    component.set("v.words", randomizeWords);
+    helper.resetBoard(component);
   }
 });

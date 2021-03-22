@@ -12,8 +12,8 @@
     <aura:handler name="render" value="{!this}" action="{!c.doRender}"/>
     <!-- <aura:handler name="onclick" event="c:BlockClickEvent" action="{!c.blockClickHandler}"/> -->
 
-    <aura:method name="startGame" action="{!c.doInit}" description="Start new Game">
-    </aura:method>
+    <aura:method name="startGame" action="{!c.doInit}" description="Start new Game"/>
+    <aura:method name="reshuffleBoard" action="{!c.reshuffleBoard}" description="Reshuffle Board"/>
 
     <div class="board">
         <lightning:layout>
