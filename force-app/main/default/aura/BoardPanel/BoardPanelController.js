@@ -34,5 +34,8 @@
     } else {
       component.set("v.reshuffleDisabled", false);
     }
+
+    //call the helper method to set the gameResult through AuraEnabled method of Controller
+    helper.addResultRecord(component, result);
   }
 });

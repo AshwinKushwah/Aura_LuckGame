@@ -35,9 +35,9 @@
 
         <lightning:layout multipleRows="true">
           <!--Layout Content goes here-->
-            <aura:iteration items="{!v.words}" var="word">
+            <aura:iteration items="{!v.words}" var="wordObj">
                 <lightning:layoutItem size="{!v.blockSize}" padding="around-small">
-                    <c:Block label="{!word}" onclick="{!c.blockClickHandler}"></c:Block>
+                    <c:Block label="{!wordObj.word}" open="{!wordObj.open}" onclick="{!c.blockClickHandler}"></c:Block>
                 </lightning:layoutItem> 
             </aura:iteration>
       </lightning:layout>
