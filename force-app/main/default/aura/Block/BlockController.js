@@ -10,5 +10,10 @@
       compEvent.setParams({ wordValue: label });
       compEvent.fire();
     }
+  },
+  // processing the task after FitText Library is Loaded
+  scriptsLoaded: function (component, event, helper) {
+    const divElement = component.getElement(".board-block"); // finding the element through class name
+    fitText(divElement);
   }
 });
