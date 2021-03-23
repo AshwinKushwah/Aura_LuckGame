@@ -31,10 +31,15 @@
 
     if (result === "WIN") {
       component.set("v.reshuffleDisabled", true);
+      helper.showToast("YOU WIN", "Hooray!!", "success");
     } else {
       component.set("v.reshuffleDisabled", false);
+      helper.showToast(
+        "YOU LOSE",
+        "Reshuffle the board to keep playing",
+        "error"
+      );
     }
-
     //call the helper method to set the gameResult through AuraEnabled method of Controller
     helper.addResultRecord(component, result);
   }
