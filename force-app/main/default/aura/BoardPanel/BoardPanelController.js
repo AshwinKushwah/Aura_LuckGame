@@ -18,7 +18,7 @@
       boardComp.startGame();
     }
   },
-  reshuffleBorad: function (component, event, helper) {
+  reshuffleBoard: function (component, event, helper) {
     const boardComp = component.find("boardComp");
     //calling the borad (child) component method
     boardComp.reshuffleBoard();

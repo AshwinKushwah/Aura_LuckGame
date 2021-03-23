@@ -26,7 +26,7 @@
                 <lightning:button variant="brand" label="Start New Game" title="Start New Game" onclick="{!c.startGame}"/>
               </lightning:layoutItem>
               <lightning:layoutItem padding="around-small">
-                <lightning:button label="Reshuffle" disabled="{!v.reshuffleDisabled}" title="Reshuffle" onclick="{!c.reshuffleBorad}"/>
+                <lightning:button label="Reshuffle" disabled="{!v.reshuffleDisabled}" title="Reshuffle" onclick="{!c.reshuffleBoard}"/>
               </lightning:layoutItem>
               
               <lightning:layoutItem size="12">

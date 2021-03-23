@@ -31,6 +31,7 @@
   doRender: function (component, event, helper) {
     console.log("Render complete");
   },
+
   blockClickHandler: function (component, event, helper) {
     let clickCount = component.get("v.clickCount") + 1;
 

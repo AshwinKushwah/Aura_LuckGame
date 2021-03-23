@@ -9,7 +9,7 @@
       mode: modeValue
     });
 
-    action.setCallback(this, function (responce) {
+    action.setCallback(this, function (response) {
       const state = response.getState();
       if (state !== "SUCCESS") console.log("Error in Saving the Record");
     });
